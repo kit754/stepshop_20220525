@@ -1,0 +1,9 @@
+#pre-header a
+{
+    color: white;
+}
+
+#pre-header a:hover
+{
+    opacity: 0.8;
+}
