@@ -1,5 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 
+from cart.models import Cart
 from products.models import Product, ProductCategory
 
 links_menu = [
@@ -21,6 +22,11 @@ def products(request, pk=None):
     # products_ = Product.objects.all().get(startswith='Д')
     categories = ProductCategory.objects.all()
 
+    cart = []
+
+    if request.user.is_authenticated:
+        cart = Cart.objects.filter(user=request.user)
+
     if pk is not None:
         if pk == 0:
             products_ = Product.objects.all().order_by('price')
@@ -35,6 +41,7 @@ def products(request, pk=None):
             'products': products_,
             'categories': categories,
             'category': category,
+            'cart': cart,
         }
         return render(request, 'products.html', context)
 
@@ -43,6 +50,7 @@ def products(request, pk=None):
         'links_menu': links_menu,
         'products': products_,
         'categories': categories,
+        'cart': cart,
     }
 
     return render(request, 'products.html', context)

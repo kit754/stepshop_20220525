@@ -27,6 +27,7 @@ urlpatterns = [
     path('about/', about, name='about'),
     path('products/', include('products.urls', namespace='products')),
     path('auth/', include('authapp.urls', namespace='auth')),
+    path('cart/', include('cart.urls', namespace='cart')),
 ]
 
 

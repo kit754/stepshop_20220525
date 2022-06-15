@@ -32,17 +32,36 @@
 <div id="pre-header">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-            <span>
-              {% if user.is_authenticated %}
-                <a href="{% url 'auth:edit' %}">
-                    {{ user.username }}
+            <div class="col-md-12 d-flex justify-content-end align-items-center text-light">
+
+                {% if user.is_authenticated %}
+                {% if user.is_superuser %}
+                <a href="/admin/" class="nav-link">
+                    <span>Админка</span>
                 </a>
-                | <a href="{% url 'auth:logout' %}">Выйти</a>
-              {% else %}
-                <a href="{% url 'auth:login' %}">Войти / Зарегистрироваться</a>
-              {% endif %}
-            </span>
+                |
+                {% endif %}
+
+                <a href="{% url 'auth:edit' %}" class="nav-link">
+                    <span>{{ user.first_name|default:'Пользователь' }}</span>
+                </a>
+                |
+                <a href="{% url 'auth:logout' %}" class="nav-link">
+                    <span>Выйти</span>
+                </a>
+                {% else %}
+                <a href="{% url 'auth:login' %}" class="nav-link">
+                    <span>Войти</span>
+                </a>
+                {% endif %}
+                {% if cart %}
+                <a href="{% url 'cart:view' %}" class="cart">
+                    <span>{{ cart.0.total_quantity }}</span>
+                </a>
+                |
+                <div class="nav-link">$ {{ cart.0.total_cost|floatformat:'g' }}</div>
+                {% endif %}
+
             </div>
         </div>
     </div>
@@ -82,7 +101,8 @@ HTML
                                 </div>
                                 <div class="col-md-5">
                                     <fieldset>
-                                        <button type="submit" id="form-submit" class="button">Подписывайтесь сейчас!</button>
+                                        <button type="submit" id="form-submit" class="button">Подписывайтесь сейчас!
+                                        </button>
                                     </fieldset>
                                 </div>
                             </div>
@@ -102,7 +122,7 @@ HTML
         <div class="row">
             <div class="col-md-12">
                 <div class="logo">
-                    <img src="{% static 'assets/images/logo.png'%}" width="122", height="26" alt="">
+                    <img src="{% static 'assets/images/logo.png'%}" width="122" , height="26" alt="">
                 </div>
             </div>
             <div class="col-md-12">
@@ -169,6 +189,7 @@ HTML
           t.style.color='#fff';
           }
       }
+
 
 
 </script>

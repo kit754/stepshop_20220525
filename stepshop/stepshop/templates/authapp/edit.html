@@ -17,7 +17,7 @@
                 <img src="/media/{{ user.avatar }}" alt=" {{ user.username }}" class="rounded-circle">
             </div>
             <form class="form-horizontal" action="{% url 'auth:edit' %}" method="post"
-                  endtype="multipart/form-data">
+                  enctype="multipart/form-data">
                 {% csrf_token %}
                 {{ edit_form.as_p }}
 

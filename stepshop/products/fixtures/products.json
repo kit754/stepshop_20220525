@@ -5,13 +5,13 @@
     "fields": {
       "category": 1,
       "name": "Джинсы сииние",
-      "image": "",
+      "image": "product_images/big-02_BhClBYZ.jpg",
       "short_desc": "Очень хорошие",
       "description": "",
       "price": "500.00",
       "quantity": 5,
-      "created_at": "2022-06-01T11:40:42.964Z",
-      "updated_at": "2022-06-01T11:40:42.964Z"
+      "created_at": "2022-06-07T10:42:33.571Z",
+      "updated_at": "2022-06-09T11:07:33.563Z"
     }
   },
   {
@@ -20,13 +20,13 @@
     "fields": {
       "category": 1,
       "name": "Джинсы красные",
-      "image": "product_images/big-02.jpg",
+      "image": "product_images/thumb-031_CmzaAZ6.jpg",
       "short_desc": "Очень хорошие",
       "description": "",
       "price": "800.00",
       "quantity": 5,
-      "created_at": "2022-06-01T11:41:49.019Z",
-      "updated_at": "2022-06-02T09:23:18.378Z"
+      "created_at": "2022-06-07T10:42:33.715Z",
+      "updated_at": "2022-06-12T10:03:40.257Z"
     }
   },
   {
@@ -40,8 +40,8 @@
       "description": "",
       "price": "5000.00",
       "quantity": 5,
-      "created_at": "2022-06-02T09:22:12.230Z",
-      "updated_at": "2022-06-02T09:22:30.464Z"
+      "created_at": "2022-06-07T10:42:33.875Z",
+      "updated_at": "2022-06-07T10:42:33.875Z"
     }
   },
   {
@@ -50,13 +50,103 @@
     "fields": {
       "category": 2,
       "name": "Правый кед",
-      "image": "product_images/product-04_j4DXJxL.jpg",
+      "image": "product_images/product-041.jpg",
       "short_desc": "Только правый",
       "description": "",
       "price": "600.00",
       "quantity": 10,
-      "created_at": "2022-06-02T09:48:06.906Z",
-      "updated_at": "2022-06-02T10:15:41.393Z"
+      "created_at": "2022-06-07T10:42:34.013Z",
+      "updated_at": "2022-06-12T09:59:23.546Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 5,
+    "fields": {
+      "category": 3,
+      "name": "Бобры мультяшные",
+      "image": "product_images/beavers.jpg",
+      "short_desc": "Бобры из мультика",
+      "description": "Бобры из мультика",
+      "price": "100.00",
+      "quantity": 10,
+      "created_at": "2022-06-14T09:15:42.711Z",
+      "updated_at": "2022-06-14T09:15:42.711Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 6,
+    "fields": {
+      "category": 1,
+      "name": "Джинсы клёвые",
+      "image": "product_images/big-01.jpg",
+      "short_desc": "Джинсы неделька",
+      "description": "Джинсы неделька на каждый день",
+      "price": "300.00",
+      "quantity": 20,
+      "created_at": "2022-06-14T09:32:15.454Z",
+      "updated_at": "2022-06-14T09:32:15.454Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 7,
+    "fields": {
+      "category": 1,
+      "name": "Джинсы темные",
+      "image": "product_images/item-02.jpg",
+      "short_desc": "Джинсы темные",
+      "description": "Джинсы темные большие",
+      "price": "200.00",
+      "quantity": 10,
+      "created_at": "2022-06-14T09:32:58.833Z",
+      "updated_at": "2022-06-14T09:32:58.834Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 8,
+    "fields": {
+      "category": 2,
+      "name": "Кеды красные",
+      "image": "product_images/product-04_AHEbEXr.jpg",
+      "short_desc": "Кеды красные",
+      "description": "Кеды красные-прекрасные",
+      "price": "300.00",
+      "quantity": 10,
+      "created_at": "2022-06-14T09:33:58.104Z",
+      "updated_at": "2022-06-14T09:33:58.104Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 9,
+    "fields": {
+      "category": 4,
+      "name": "Безрукавка",
+      "image": "product_images/item-03.jpg",
+      "short_desc": "Безрукавка",
+      "description": "Безрукавка синяя",
+      "price": "200.00",
+      "quantity": 5,
+      "created_at": "2022-06-14T09:34:46.695Z",
+      "updated_at": "2022-06-14T09:34:46.695Z"
+    }
+  },
+  {
+    "model": "products.product",
+    "pk": 10,
+    "fields": {
+      "category": 5,
+      "name": "Сумочка голубая",
+      "image": "product_images/item-04.jpg",
+      "short_desc": "Сумочка голубая",
+      "description": "Сумочка голубая",
+      "price": "150.00",
+      "quantity": 10,
+      "created_at": "2022-06-14T09:36:01.754Z",
+      "updated_at": "2022-06-14T09:36:01.755Z"
     }
   }
 ]
