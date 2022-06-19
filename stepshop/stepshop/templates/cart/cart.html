@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block title %}
+    {{ title|capfirst }}
+{% endblock %}
+
 {% block content %}
 {% if user.is_authenticated %}
 <div class="container w-50 mt-5">

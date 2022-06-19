@@ -17,7 +17,7 @@
 
         {% for product in products %}
         <div id="{{ product.pk }}" class="item new col-md-4">
-            <a href="{% url 'cart:add' product.pk %}">
+            <a href="{% url 'products:product' product.pk %}">
                 <div class="featured-item">
                     <img src="/media/{{ product.image }}" alt="{{ product.name }}">
                     <h4>{{ product.name }}</h4>
