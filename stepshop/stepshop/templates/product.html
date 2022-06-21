@@ -24,7 +24,7 @@
           <div class="col-md-6">
             <div class="right-content">
               <h4>{{ product.name }}</h4>
-              <h6>$ {{ product.price|floatformat:'g' }}</h6>
+              <h6>{{ product.price|floatformat:'g' }} тенге</h6>
               <p>{{ product.description }}</p>
               <span>На складе {{ product.quantity}} шт.</span>
 
@@ -64,7 +64,7 @@
                 <div class="featured-item">
                   <img src="/media/{{ product.image }}" alt="{{ product.name }}">
                   <h4>{{ product.name }}</h4>
-                  <h6>$ {{ product.price|floatformat:'g' }}</h6>
+                  <h6>{{ product.price|floatformat:'g' }} тенге</h6>
                 </div>
               </a>
               {% endfor %}

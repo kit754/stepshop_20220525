@@ -12,7 +12,7 @@
     "pk": 2,
     "fields": {
       "name": "Кеды",
-      "description": ""
+      "description": "Кеды"
     }
   },
   {
@@ -20,14 +20,14 @@
     "pk": 3,
     "fields": {
       "name": "Бобры",
-      "description": ""
+      "description": "Бобры"
     }
   },
   {
     "model": "products.productcategory",
     "pk": 4,
     "fields": {
-      "name": "Куртка",
+      "name": "Куртки",
       "description": "Куртки"
     }
   },
@@ -37,6 +37,14 @@
     "fields": {
       "name": "Сумочки",
       "description": "Сумочки"
+    }
+  },
+  {
+    "model": "products.productcategory",
+    "pk": 6,
+    "fields": {
+      "name": "Видеонаблюдение",
+      "description": ""
     }
   }
 ]

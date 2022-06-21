@@ -27,7 +27,7 @@ class Product(models.Model):
     category = models.ForeignKey(
         ProductCategory,
         on_delete=models.CASCADE,
-        verbose_name='категория',
+        verbose_name='подкатегория',
     )
 
     name = models.CharField(
