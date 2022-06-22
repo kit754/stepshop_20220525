@@ -7,6 +7,13 @@ from django.urls import reverse
 from cart.models import Cart
 from products.models import Product
 
+links_menu = [
+    {'href': 'index', 'name': 'Главная', 'route': ''},
+    {'href': 'products:index', 'name': 'Продукты', 'route': 'products/'},
+    {'href': 'about', 'name': 'О&nbsp;нас', 'route': 'about/'},
+    {'href': 'contacts', 'name': 'Контакты', 'route': 'contacts/'},
+]
+
 
 @login_required
 def cart(request):
@@ -14,6 +21,7 @@ def cart(request):
         cart_ = Cart.objects.filter(user=request.user)
         context = {
             'cart': cart_,
+            'links_menu': links_menu,
         }
 
         return render(request, 'cart/cart.html', context)

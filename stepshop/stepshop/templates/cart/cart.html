@@ -1,12 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags %}
 
 {% block title %}
-    {{ title|capfirst }}
+{{ title|capfirst }}
 {% endblock %}
+
 
 {% block content %}
 {% if user.is_authenticated %}
+
 <div class="container w-50 mt-5">
     <div class="row cart-list">
         <table class="table mt-3">

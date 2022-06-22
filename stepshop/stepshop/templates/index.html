@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load my_tags %}
 
 <title>{% block title %}{{title|capfirst}}{% endblock %}</title>
 
@@ -15,11 +16,8 @@
                     <h2>Наш HTML проект Django</h2>
                     <div class="line-dec"></div>
                     <p>Это наш HTML шаблон для работы в проекте Django на нашем курсе по Python.
-                        <br><br>Пожалуйста никому не рассказывайте о нем на <a rel="nofollow"
-                                                                  href="https://www.facebook.com/tooplate/">Tooplate</a>
-                        сайте. Спасибо. Фото на <a rel="nofollow"
-                                                                               href="https://www.pexels.com">Pexels
-                            website</a>.</p>
+                        <br><br>Пожалуйста никому не рассказывайте о нем на
+                        сайте. Спасибо.
                     <div class="main-button">
                         <a href="#">Не заказывайте!</a>
                     </div>
@@ -37,17 +35,17 @@
             <div class="col-md-12">
                 <div class="section-heading">
                     <div class="line-dec"></div>
-                    <h1>Featured Items</h1>
+                    <h1>Товары для Вас!</h1>
                 </div>
             </div>
             <div class="col-md-12">
                 <div class="owl-carousel owl-theme">
                     <a href="single-product.html">
                         <div class="featured-item">
-                            <img src="{% static 'assets/images/item-01.jpg'%}" alt="Item 1">
-                            <h4>Proin vel ligula</h4>
-                            <h6>$15.00</h6>
-                        </div>
+                    <img src="{{ product.image|media_folder_products }}" alt="{{ product.name }}">
+                    <h4>{{ product.name }}</h4>
+                    <h6>{{ product.name }}</h6>
+                </div>
                     </a>
                     <a href="single-product.html">
                         <div class="featured-item">
